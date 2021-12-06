@@ -12,6 +12,7 @@ namespace ContosoUniversity.Pages.Students
     public class IndexModel : PageModel
     {
         private readonly SchoolContext _context;
+
         public IndexModel(SchoolContext context)
         {
             _context = context;
@@ -24,14 +25,20 @@ namespace ContosoUniversity.Pages.Students
 
         public IList<Student> Students { get; set; }
 
-        public async Task OnGetAsync(string sortOrder)
+        public async Task OnGetAsync(string sortOrder, string searchString)
         {
-            // using System;
             NameSort = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             DateSort = sortOrder == "Date" ? "date_desc" : "Date";
 
+            CurrentFilter = searchString;
+
             IQueryable<Student> studentsIQ = from s in _context.Students
                                              select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                studentsIQ = studentsIQ.Where(s => s.LastName.Contains(searchString)
+                                       || s.FirstMidName.Contains(searchString));
+            }
 
             switch (sortOrder)
             {
