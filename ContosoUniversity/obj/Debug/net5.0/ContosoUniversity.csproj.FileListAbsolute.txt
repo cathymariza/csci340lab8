@@ -169,3 +169,4 @@ C:\Users\nmali\Desktop\cathymariza.github.io\csci340lab8\ContosoUniversity\obj\D
 C:\Users\nmali\Desktop\cathymariza.github.io\csci340lab8\ContosoUniversity\obj\Debug\net5.0\Razor\Pages\Students\Details.cshtml.g.cs
 C:\Users\nmali\Desktop\cathymariza.github.io\csci340lab8\ContosoUniversity\obj\Debug\net5.0\Razor\Pages\Students\Edit.cshtml.g.cs
 C:\Users\nmali\Desktop\cathymariza.github.io\csci340lab8\ContosoUniversity\obj\Debug\net5.0\Razor\Pages\Students\Index.cshtml.g.cs
+C:\Users\nmali\Desktop\cathymariza.github.io\csci340lab8\ContosoUniversity\obj\Debug\net5.0\Razor\Pages\About.cshtml.g.cs
